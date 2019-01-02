@@ -29,7 +29,7 @@ namespace Microcharts
 
         public override void DrawContent(SKCanvas canvas, int width, int height)
         {
-            this.DrawCaption(canvas, width, height);
+            
             using (new SKAutoCanvasRestore(canvas))
             {
                 canvas.Translate(width / 2, height / 2);
@@ -57,6 +57,8 @@ namespace Microcharts
                     start = end;
                 }
             }
+            
+            DrawCaption(canvas, width, height);
         }
 
         private void DrawCaption(SKCanvas canvas, int width, int height)
